@@ -19,6 +19,12 @@ data:
 " | kubectl apply --filename=-
 ```
 
+## Build container using s2i
+
+`./build.sh`
+
+* Requires s2i - https://github.com/openshift/source-to-image 
+
 ## Create Knative Service
 
 ```
