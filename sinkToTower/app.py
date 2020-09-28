@@ -37,7 +37,7 @@ def encode():
         eventName = json_body["detail"]["eventName"]    
         print(eventName)
         
-        result = post({"eventName":eventName})
+        result = post({"extra_vars": {"eventName":eventName} })
         message = "Job started. \n {0}".format(result)
 
         print(message)
