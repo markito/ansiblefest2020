@@ -37,7 +37,7 @@ def encode():
         eventName = json_body["detail"]["eventName"]
         print(eventName)
 
-        result = post({"eventName":eventName})
+        result = post({"extra_vars": {"eventName":eventName} })
         message = "Job started. \n {0}".format(result)
 
         print(message)
@@ -51,7 +51,7 @@ def encode():
  <code>data</code> as payload
 '''
 def post(data):
-    ENDPOINT=os.environ.get('ENDPOINT', "https://student1.sean-tower.rhdemo.io/api/v2/job_templates/Knative%20-%20AWS%20Report++Default/launch/")
+    ENDPOINT=os.environ.get('ENDPOINT', "https://ansible.rhdemo.io/api/v2/job_templates/193/launch/")
     USER=os.environ.get('T_USER')
     PASS=os.environ.get('T_PASS')
 
